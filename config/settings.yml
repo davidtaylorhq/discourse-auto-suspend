@@ -1,0 +1,10 @@
+plugins:
+  auto_suspend_enabled:
+    default: false
+  auto_suspend_for_years:
+    default: 200
+  auto_suspend_after_days:
+    default: 365
+  auto_suspend_safe_groups:
+    type: list
+    default: "staff"

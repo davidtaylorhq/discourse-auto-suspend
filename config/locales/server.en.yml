@@ -1,0 +1,8 @@
+en:
+  site_settings:
+    auto_suspend_enabled: Automatically suspend users after a period of inactivity?
+    auto_suspend_for_years: Number of years to suspend the account for (set very high)
+    auto_suspend_after_days: Number of days since the user was last active before suspending them
+    auto_suspend_safe_groups: If a user is part of any of these groups, never suspend them
+  discourse_auto_suspend:
+    suspend-reason: "Account inactive for more than 1 year."
