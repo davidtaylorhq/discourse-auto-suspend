@@ -26,6 +26,7 @@ after_initialize do
         auto_suspend_days = SiteSetting.auto_suspend_after_days.days.ago
         to_suspend = User.where("last_seen_at IS NULL OR last_seen_at < ? AND created_at < ?", auto_suspend_days, auto_suspend_days)
                          .where('suspended_till IS NULL OR suspended_till < ?', Time.zone.now)
+                         .real
 
         for user in to_suspend do
           safe_groups = SiteSetting.auto_suspend_safe_groups
